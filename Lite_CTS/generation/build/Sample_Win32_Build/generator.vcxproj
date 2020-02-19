@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug - RI|Win32">
+      <Configuration>Debug - RI</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release - RI|Win32">
+      <Configuration>Release - RI</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{42E0E27B-767E-4C15-82D3-C6213A9FAE36}</ProjectGuid>
+    <RootNamespace>5.conform</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release - RI|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - RI|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release - RI|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug - RI|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">obj/generator/Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">obj/generator/Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug - RI|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug - RI|Win32'">obj/generator/$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug - RI|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release - RI|Win32'">bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release - RI|Win32'">obj/generator/$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release - RI|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>include;../../source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>lib/debug/libOpenVG.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)generator.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;../../source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>lib/release/libOpenVG.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)generator.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug - RI|Win32'">
+    <CustomBuildStep>
+      <Command>copy /Y ..\..\make\ri\bin\win32\libOpenVG.dll $(OutDir)
+</Command>
+      <Inputs>..\..\make\ri\bin\win32\libOpenVG.dll;%(Inputs)</Inputs>
+      <Outputs>$(OutDir)libOpenVG.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../make/ri/ri/include;../../source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../make/ri/lib/libOpenVG.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)generator.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release - RI|Win32'">
+    <CustomBuildStep>
+      <Command>copy /Y ..\..\make\ri\bin\win32\libOpenVG.dll $(OutDir)
+</Command>
+      <Inputs>..\..\make\ri\bin\win32\libOpenVG.dll;%(Inputs)</Inputs>
+      <Outputs>$(OutDir)libOpenVG.dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../make/ri/ri/include;../../source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>../../make/ri/lib/libOpenVG.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)generator.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\functions\A10101.c" />
+    <ClCompile Include="..\..\source\functions\A10102.c" />
+    <ClCompile Include="..\..\source\functions\A20101.c" />
+    <ClCompile Include="..\..\source\functions\A20201.c" />
+    <ClCompile Include="..\..\source\functions\A20301.c" />
+    <ClCompile Include="..\..\source\functions\A30101.c" />
+    <ClCompile Include="..\..\source\functions\A30201.c" />
+    <ClCompile Include="..\..\source\functions\A30301.c" />
+    <ClCompile Include="..\..\source\functions\A40101.c" />
+    <ClCompile Include="..\..\source\functions\A40102.c" />
+    <ClCompile Include="..\..\source\functions\B10101.c" />
+    <ClCompile Include="..\..\source\functions\B10102.c" />
+    <ClCompile Include="..\..\source\functions\B10103.c" />
+    <ClCompile Include="..\..\source\functions\B10104.c" />
+    <ClCompile Include="..\..\source\functions\B10105.c" />
+    <ClCompile Include="..\..\source\functions\B10106.c" />
+    <ClCompile Include="..\..\source\functions\B10108.c" />
+    <ClCompile Include="..\..\source\functions\B10109.c" />
+    <ClCompile Include="..\..\source\functions\C10101.c" />
+    <ClCompile Include="..\..\source\functions\C10201.c" />
+    <ClCompile Include="..\..\source\functions\C10202.c" />
+    <ClCompile Include="..\..\source\functions\C10203.c" />
+    <ClCompile Include="..\..\source\functions\C10301.c" />
+    <ClCompile Include="..\..\source\functions\C10401.c" />
+    <ClCompile Include="..\..\source\functions\C10402.c" />
+    <ClCompile Include="..\..\source\functions\C10403.c" />
+    <ClCompile Include="..\..\source\functions\C10501.c" />
+    <ClCompile Include="..\..\source\functions\C10601.c" />
+    <ClCompile Include="..\..\source\functions\C10701.c" />
+    <ClCompile Include="..\..\source\functions\C10801.c" />
+    <ClCompile Include="..\..\source\functions\C10802.c" />
+    <ClCompile Include="..\..\source\functions\C20101.c" />
+    <ClCompile Include="..\..\source\functions\D10101.c" />
+    <ClCompile Include="..\..\source\functions\D10201.c" />
+    <ClCompile Include="..\..\source\functions\D10301.c" />
+    <ClCompile Include="..\..\source\functions\E10101.c" />
+    <ClCompile Include="..\..\source\functions\E10102.c" />
+    <ClCompile Include="..\..\source\functions\E10103.c" />
+    <ClCompile Include="..\..\source\functions\E10301.c" />
+    <ClCompile Include="..\..\source\functions\F10101.c" />
+    <ClCompile Include="..\..\source\functions\F10201.c" />
+    <ClCompile Include="..\..\source\functions\F10202.c" />
+    <ClCompile Include="..\..\source\functions\F10203.c" />
+    <ClCompile Include="..\..\source\functions\F10204.c" />
+    <ClCompile Include="..\..\source\functions\F20101.c" />
+    <ClCompile Include="..\..\source\functions\F20102.c" />
+    <ClCompile Include="..\..\source\functions\F20103.c" />
+    <ClCompile Include="..\..\source\functions\F20104.c" />
+    <ClCompile Include="..\..\source\functions\F20105.c" />
+    <ClCompile Include="..\..\source\functions\F20106.c" />
+    <ClCompile Include="..\..\source\functions\F20107.c" />
+    <ClCompile Include="..\..\source\functions\G10101.c" />
+    <ClCompile Include="..\..\source\functions\G10102.c" />
+    <ClCompile Include="..\..\source\functions\G10103.c" />
+    <ClCompile Include="..\..\source\functions\G10201.c" />
+    <ClCompile Include="..\..\source\functions\G10202.c" />
+    <ClCompile Include="..\..\source\functions\G10203.c" />
+    <ClCompile Include="..\..\source\functions\G10204.c" />
+    <ClCompile Include="..\..\source\functions\G10205.c" />
+    <ClCompile Include="..\..\source\functions\G10206.c" />
+    <ClCompile Include="..\..\source\functions\G10301.c" />
+    <ClCompile Include="..\..\source\functions\G10302.c" />
+    <ClCompile Include="..\..\source\functions\G10303.c" />
+    <ClCompile Include="..\..\source\functions\G10304.c" />
+    <ClCompile Include="..\..\source\functions\G20101.c" />
+    <ClCompile Include="..\..\source\functions\G20102.c" />
+    <ClCompile Include="..\..\source\functions\G20201.c" />
+    <ClCompile Include="..\..\source\functions\G20301.c" />
+    <ClCompile Include="..\..\source\functions\G20302.c" />
+    <ClCompile Include="..\..\source\functions\G20303.c" />
+    <ClCompile Include="..\..\source\functions\G20304.c" />
+    <ClCompile Include="..\..\source\functions\G20401.c" />
+    <ClCompile Include="..\..\source\functions\G20402.c" />
+    <ClCompile Include="..\..\source\functions\G20501.c" />
+    <ClCompile Include="..\..\source\functions\G20502.c" />
+    <ClCompile Include="..\..\source\functions\G20503.c" />
+    <ClCompile Include="..\..\source\functions\G20601.c" />
+    <ClCompile Include="..\..\source\functions\G20602.c" />
+    <ClCompile Include="..\..\source\functions\G20603.c" />
+    <ClCompile Include="..\..\source\functions\G20604.c" />
+    <ClCompile Include="..\..\source\functions\G20605.c" />
+    <ClCompile Include="..\..\source\functions\G20606.c" />
+    <ClCompile Include="..\..\source\functions\G20607.c" />
+    <ClCompile Include="..\..\source\functions\G20608.c" />
+    <ClCompile Include="..\..\source\functions\G20609.c" />
+    <ClCompile Include="..\..\source\functions\G20610.c" />
+    <ClCompile Include="..\..\source\functions\G20701.c" />
+    <ClCompile Include="..\..\source\functions\G20702.c" />
+    <ClCompile Include="..\..\source\functions\G20703.c" />
+    <ClCompile Include="..\..\source\functions\G20704.c" />
+    <ClCompile Include="..\..\source\functions\G20801.c" />
+    <ClCompile Include="..\..\source\functions\G20802.c" />
+    <ClCompile Include="..\..\source\functions\G20803.c" />
+    <ClCompile Include="..\..\source\functions\G20804.c" />
+    <ClCompile Include="..\..\source\functions\G20901.c" />
+    <ClCompile Include="..\..\source\functions\G20902.c" />
+    <ClCompile Include="..\..\source\functions\G20903.c" />
+    <ClCompile Include="..\..\source\functions\G20904.c" />
+    <ClCompile Include="..\..\source\functions\G21001.c" />
+    <ClCompile Include="..\..\source\functions\G21002.c" />
+    <ClCompile Include="..\..\source\functions\G21003.c" />
+    <ClCompile Include="..\..\source\functions\G21004.c" />
+    <ClCompile Include="..\..\source\functions\G30101.c" />
+    <ClCompile Include="..\..\source\functions\G30102.c" />
+    <ClCompile Include="..\..\source\functions\G30103.c" />
+    <ClCompile Include="..\..\source\functions\G30104.c" />
+    <ClCompile Include="..\..\source\functions\G30106.c" />
+    <ClCompile Include="..\..\source\functions\G30107.c" />
+    <ClCompile Include="..\..\source\functions\G30116.c" />
+    <ClCompile Include="..\..\source\functions\G30117.c" />
+    <ClCompile Include="..\..\source\functions\G30118.c" />
+    <ClCompile Include="..\..\source\functions\G30119.c" />
+    <ClCompile Include="..\..\source\functions\G30120.c" />
+    <ClCompile Include="..\..\source\functions\G30122.c" />
+    <ClCompile Include="..\..\source\functions\G30123.c" />
+    <ClCompile Include="..\..\source\functions\G30124.c" />
+    <ClCompile Include="..\..\source\functions\G30201.c" />
+    <ClCompile Include="..\..\source\functions\G30203.c" />
+    <ClCompile Include="..\..\source\functions\G30208.c" />
+    <ClCompile Include="..\..\source\functions\G30209.c" />
+    <ClCompile Include="..\..\source\functions\G30213.c" />
+    <ClCompile Include="..\..\source\functions\G30219.c" />
+    <ClCompile Include="..\..\source\functions\G30220.c" />
+    <ClCompile Include="..\..\source\functions\G30221.c" />
+    <ClCompile Include="..\..\source\functions\G30222.c" />
+    <ClCompile Include="..\..\source\functions\G30223.c" />
+    <ClCompile Include="..\..\source\functions\G30224.c" />
+    <ClCompile Include="..\..\source\functions\G30225.c" />
+    <ClCompile Include="..\..\source\functions\G30226.c" />
+    <ClCompile Include="..\..\source\functions\G30233.c" />
+    <ClCompile Include="..\..\source\functions\G30234.c" />
+    <ClCompile Include="..\..\source\functions\G30235.c" />
+    <ClCompile Include="..\..\source\functions\G30248.c" />
+    <ClCompile Include="..\..\source\functions\G30249.c" />
+    <ClCompile Include="..\..\source\functions\G30250.c" />
+    <ClCompile Include="..\..\source\functions\G30251.c" />
+    <ClCompile Include="..\..\source\functions\G30252.c" />
+    <ClCompile Include="..\..\source\functions\G30253.c" />
+    <ClCompile Include="..\..\source\functions\G30254.c" />
+    <ClCompile Include="..\..\source\functions\G30261.c" />
+    <ClCompile Include="..\..\source\functions\G30276.c" />
+    <ClCompile Include="..\..\source\functions\G30277.c" />
+    <ClCompile Include="..\..\source\functions\G30278.c" />
+    <ClCompile Include="..\..\source\functions\G30279.c" />
+    <ClCompile Include="..\..\source\functions\G30303.c" />
+    <ClCompile Include="..\..\source\functions\G30304.c" />
+    <ClCompile Include="..\..\source\functions\G30305.c" />
+    <ClCompile Include="..\..\source\functions\G30306.c" />
+    <ClCompile Include="..\..\source\functions\G30307.c" />
+    <ClCompile Include="..\..\source\functions\G30308.c" />
+    <ClCompile Include="..\..\source\functions\G30309.c" />
+    <ClCompile Include="..\..\source\functions\G40101.c" />
+    <ClCompile Include="..\..\source\functions\G40102.c" />
+    <ClCompile Include="..\..\source\functions\G40103.c" />
+    <ClCompile Include="..\..\source\functions\G50101.c" />
+    <ClCompile Include="..\..\source\functions\G50102.c" />
+    <ClCompile Include="..\..\source\functions\G50103.c" />
+    <ClCompile Include="..\..\source\functions\G50104.c" />
+    <ClCompile Include="..\..\source\functions\G50105.c" />
+    <ClCompile Include="..\..\source\functions\G50106.c" />
+    <ClCompile Include="..\..\source\functions\G50107.c" />
+    <ClCompile Include="..\..\source\functions\G50108.c" />
+    <ClCompile Include="..\..\source\functions\G50109.c" />
+    <ClCompile Include="..\..\source\functions\G50110.c" />
+    <ClCompile Include="..\..\source\functions\G50111.c" />
+    <ClCompile Include="..\..\source\functions\G50112.c" />
+    <ClCompile Include="..\..\source\functions\G50113.c" />
+    <ClCompile Include="..\..\source\functions\H10101.c" />
+    <ClCompile Include="..\..\source\functions\H10201.c" />
+    <ClCompile Include="..\..\source\functions\H10202.c" />
+    <ClCompile Include="..\..\source\functions\H10203.c" />
+    <ClCompile Include="..\..\source\functions\H10301.c" />
+    <ClCompile Include="..\..\source\functions\H10302.c" />
+    <ClCompile Include="..\..\source\functions\H10316.c" />
+    <ClCompile Include="..\..\source\functions\H10317.c" />
+    <ClCompile Include="..\..\source\functions\H10318.c" />
+    <ClCompile Include="..\..\source\functions\H10319.c" />
+    <ClCompile Include="..\..\source\functions\H10320.c" />
+    <ClCompile Include="..\..\source\functions\H10321.c" />
+    <ClCompile Include="..\..\source\functions\H10322.c" />
+    <ClCompile Include="..\..\source\functions\H10323.c" />
+    <ClCompile Include="..\..\source\functions\H10324.c" />
+    <ClCompile Include="..\..\source\functions\H10325.c" />
+    <ClCompile Include="..\..\source\functions\H10326.c" />
+    <ClCompile Include="..\..\source\functions\H10327.c" />
+    <ClCompile Include="..\..\source\functions\H10328.c" />
+    <ClCompile Include="..\..\source\functions\H10329.c" />
+    <ClCompile Include="..\..\source\functions\H10330.c" />
+    <ClCompile Include="..\..\source\functions\H10331.c" />
+    <ClCompile Include="..\..\source\functions\H10401.c" />
+    <ClCompile Include="..\..\source\functions\H10402.c" />
+    <ClCompile Include="..\..\source\functions\H10403.c" />
+    <ClCompile Include="..\..\source\functions\H10501.c" />
+    <ClCompile Include="..\..\source\functions\H10601.c" />
+    <ClCompile Include="..\..\source\functions\H10701.c" />
+    <ClCompile Include="..\..\source\functions\H10702.c" />
+    <ClCompile Include="..\..\source\functions\H10801.c" />
+    <ClCompile Include="..\..\source\functions\H10901.c" />
+    <ClCompile Include="..\..\source\functions\H10902.c" />
+    <ClCompile Include="..\..\source\functions\H20101.c" />
+    <ClCompile Include="..\..\source\functions\H30101.c" />
+    <ClCompile Include="..\..\source\functions\H30201.c" />
+    <ClCompile Include="..\..\source\functions\H30203.c" />
+    <ClCompile Include="..\..\source\functions\H30204.c" />
+    <ClCompile Include="..\..\source\functions\H30205.c" />
+    <ClCompile Include="..\..\source\functions\H30206.c" />
+    <ClCompile Include="..\..\source\functions\I10101.c" />
+    <ClCompile Include="..\..\source\functions\I10102.c" />
+    <ClCompile Include="..\..\source\functions\I10103.c" />
+    <ClCompile Include="..\..\source\functions\I10104.c" />
+    <ClCompile Include="..\..\source\functions\I10201.c" />
+    <ClCompile Include="..\..\source\functions\I10202.c" />
+    <ClCompile Include="..\..\source\functions\I20101.c" />
+    <ClCompile Include="..\..\source\functions\I30101.c" />
+    <ClCompile Include="..\..\source\functions\I30102.c" />
+    <ClCompile Include="..\..\source\functions\I30103.c" />
+    <ClCompile Include="..\..\source\functions\I30104.c" />
+    <ClCompile Include="..\..\source\functions\I30201.c" />
+    <ClCompile Include="..\..\source\functions\I30202.c" />
+    <ClCompile Include="..\..\source\functions\I30203.c" />
+    <ClCompile Include="..\..\source\functions\I30204.c" />
+    <ClCompile Include="..\..\source\functions\I30205.c" />
+    <ClCompile Include="..\..\source\functions\I30206.c" />
+    <ClCompile Include="..\..\source\functions\I30207.c" />
+    <ClCompile Include="..\..\source\functions\I30208.c" />
+    <ClCompile Include="..\..\source\functions\I30209.c" />
+    <ClCompile Include="..\..\source\functions\I30301.c" />
+    <ClCompile Include="..\..\source\functions\I30302.c" />
+    <ClCompile Include="..\..\source\functions\I30304.c" />
+    <ClCompile Include="..\..\source\functions\I30305.c" />
+    <ClCompile Include="..\..\source\functions\I30306.c" />
+    <ClCompile Include="..\..\source\functions\I30309.c" />
+    <ClCompile Include="..\..\source\functions\I40101.c" />
+    <ClCompile Include="..\..\source\functions\I40102.c" />
+    <ClCompile Include="..\..\source\functions\I40103.c" />
+    <ClCompile Include="..\..\source\functions\I40104.c" />
+    <ClCompile Include="..\..\source\functions\I40105.c" />
+    <ClCompile Include="..\..\source\functions\I40106.c" />
+    <ClCompile Include="..\..\source\functions\J10101.c" />
+    <ClCompile Include="..\..\source\functions\J30101.c" />
+    <ClCompile Include="..\..\source\functions\J30201.c" />
+    <ClCompile Include="..\..\source\functions\J40101.c" />
+    <ClCompile Include="..\..\source\functions\J40110.c" />
+    <ClCompile Include="..\..\source\functions\K20205.c" />
+    <ClCompile Include="..\..\source\functions\K20301.c" />
+    <ClCompile Include="..\..\source\functions\L10101.c" />
+    <ClCompile Include="..\..\source\functions\L10102.c" />
+    <ClCompile Include="..\..\source\functions\L10201.c" />
+    <ClCompile Include="..\..\source\functions\L10301.c" />
+    <ClCompile Include="..\..\source\functions\L10302.c" />
+    <ClCompile Include="..\..\source\functions\L10401.c" />
+    <ClCompile Include="..\..\source\functions\L10402.c" />
+    <ClCompile Include="..\..\source\functions\L10403.c" />
+    <ClCompile Include="..\..\source\functions\M10101.c" />
+    <ClCompile Include="..\..\source\functions\M10102.c" />
+    <ClCompile Include="..\..\source\functions\M20101.c" />
+    <ClCompile Include="..\..\source\functions\M20201.c" />
+    <ClCompile Include="..\..\source\functions\M20202.c" />
+    <ClCompile Include="..\..\source\functions\M20301.c" />
+    <ClCompile Include="..\..\source\functions\M20401.c" />
+    <ClCompile Include="..\..\source\functions\M20501.c" />
+    <ClCompile Include="..\..\source\functions\M20601.c" />
+    <ClCompile Include="..\..\source\functions\M20602.c" />
+    <ClCompile Include="..\..\source\functions\M20603.c" />
+    <ClCompile Include="..\..\source\functions\M30101.c" />
+    <ClCompile Include="..\..\source\functions\M30201.c" />
+    <ClCompile Include="..\..\source\functions\M30301.c" />
+    <ClCompile Include="..\..\source\functions\N10101.c" />
+    <ClCompile Include="..\..\source\functions\N10201.c" />
+    <ClCompile Include="..\..\source\util\huone.c" />
+    <ClCompile Include="..\..\source\util\hybrid.c" />
+    <ClCompile Include="..\..\source\util\st.c" />
+    <ClCompile Include="..\..\source\util\util.c" />
+    <ClCompile Include="..\..\source\driver.c" />
+    <ClCompile Include="..\..\source\main.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\util\huone.h" />
+    <ClInclude Include="..\..\source\util\hybrid.h" />
+    <ClInclude Include="..\..\source\util\st.h" />
+    <ClInclude Include="..\..\source\util\util.h" />
+    <ClInclude Include="..\..\source\static\tests.h" />
+    <ClInclude Include="..\..\source\static\vgapi.h" />
+    <ClInclude Include="..\..\source\static\vguapi.h" />
+    <ClInclude Include="..\..\source\static\hybrid\checker.h" />
+    <ClInclude Include="..\..\source\static\hybrid\color_fans_64x64.h" />
+    <ClInclude Include="..\..\source\static\hybrid\gradient.h" />
+    <ClInclude Include="..\..\source\static\hybrid\lines_64x64.h" />
+    <ClInclude Include="..\..\source\static\hybrid\mipmap_yoda.h" />
+    <ClInclude Include="..\..\source\static\hybrid\mobile_man.h" />
+    <ClInclude Include="..\..\source\static\hybrid\pukki_16x16.h" />
+    <ClInclude Include="..\..\source\static\hybrid\pukki_64x64.h" />
+    <ClInclude Include="..\..\source\static\hybrid\red_black_box_64x64.h" />
+    <ClInclude Include="..\..\source\static\hybrid\surf.h" />
+    <ClInclude Include="..\..\source\static\Monotype\bitmapdata.h" />
+    <ClInclude Include="..\..\source\static\Monotype\pathdata.h" />
+    <ClInclude Include="..\..\source\app.h" />
+    <ClInclude Include="..\..\source\main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="adopter.vcxproj">
+      <Project>{51531271-ce00-4771-9017-f57366865667}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
