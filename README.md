@@ -1,4 +1,4 @@
 # OpenVG-CTS
-OpenVG Conformance Test Suite source code. It can be used for testing of implementations. 
+OpenVG Conformance Test Suite source code. It can be freely used for testing of any OpenVG implementation.
 
-OpenVG is trademark of Khronos Group. To use OpenVG trademark on your implementation, It it required to sign on the adopter agreement, pay the conformance fee and submit results of CTS pass to Khronos Group.  
+Parties desiring to implement the OpenVG Specification and make use of the Khronos OpenVG trademark in relation to that implementation, and receive reciprocal patent license protection under the Khronos IP Policy, must become Adopters and confirm the implementation as conformant under the process defined by Khronos for this Specification; see https://www.khronos.org/adopters.
